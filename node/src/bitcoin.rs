@@ -184,6 +184,10 @@ pub fn mainnet_trustees() -> Vec<(Chain, TrusteeInfoConfig, Vec<BtcTrusteeParams
     };
 
     let btc_trustees = vec![];
+	let doge_trustees = vec![];
 
-    vec![(Chain::Bitcoin, btc_config, btc_trustees)]
+    vec![
+        (Chain::Bitcoin, btc_config.clone(), btc_trustees),
+        (Chain::Dogecoin, btc_config, doge_trustees),
+    ]
 }
