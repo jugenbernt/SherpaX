@@ -66,6 +66,7 @@ impl SubstrateCli for Cli {
                 }
             }
             "" | "local" => Box::new(chain_spec::local_testnet_config()?),
+            "mainnet" => Box::new(chain_spec::mainnet_config()?),
             path => {
                 use std::fs::File;
                 use std::io::Read;
